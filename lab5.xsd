@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="emp-id" type="xs:integer"/>
+                            <xs:element name="emp-name" type="xs:string" />
+                            <xs:element name="emp-age" type="xs:integer" />
+                            <xs:element name="emp-salary" type="xs:decimal" />
+                            <xs:element name="emp-email" type="xs:string" />
+                            <xs:element name="emp-phone" type="xs:string" />
+                            <xs:element name="emp-designation" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:unique name="unique">
+                        <xs:selector xpath="employee" />
+                        <xs:field xpath="emp-id" />
+                    </xs:unique>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="emp-age">
+        <xs:restriction base="xs:integer">
+            <xs:maxExclusive value="60"/>
+            <xs:minInclusive value="21"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emp-salary">
+        <xs:restriction base="xs:decimal">
+            <xs:maxInclusive value="200000"/>
+            <xs:minInclusive value="50000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emp-email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emp-phone">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
