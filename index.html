@@ -6,44 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab-05 (DOM-Parser)</title>
-
+    <script type="text/javascript" src="index.js"></script>
     <h1>Lab Program - 05 (DOM Parser)</h1>
 </head>
 
-<body></body>
-<p>Write a DOM Parser code with the following conditions: </p>
-<ol type="i">
-    <li>Display the XML content in table format using XMLHttpRequest API and you should check the state and status of your connection between client and server</li>
-    <li>Write a client side script to perform following operations in your XML file using DOM Parser</li>
-    <ol type="a">
-        <li>Delete the block of node</li>
-        <li>Delete the particular element in the node</li>
-        <li>Change the node value</li>
-        <li>Add the new element</li>
+<body>
+    <p>Write a DOM Parser code with the following conditions: </p>
+    <ol type="i">
+        <li>Display the XML content in table format using XMLHttpRequest API and you should check the state and status of your connection between client and server</li>
+        <li>Write a client side script to perform following operations in your XML file using DOM Parser</li>
+        <ol type="a">
+            <li>Delete the block of node</li>
+            <li>Delete the particular element in the node</li>
+            <li>Change the node value</li>
+            <li>Add the new element</li>
+        </ol>
     </ol>
-</ol>
-<a href="lab5.xml">Click here to load the table</a>
-<h1>Train Schedule</h1>
-<div style="margin-bottom: 30px;">
-    <input type="number" id="indexToDel" placeholder="Record to delete">
-    <button onclick="deleteRecord();">Delete</button>
-</div>
-<div style="margin-bottom: 30px;">
-    <form id="newRecForm">
-        <input type="text" id="id" placeholder="enter employee's id">
-        <input type="text" id="name" placeholder="enter employee's name">
-        <input type="text" id="age" placeholder="enter employee's age">
-        <input type="text" id="salary" placeholder="enter employee's salary">
-        <input type="text" id="email" placeholder="enter employee's email">
-        <input type="text" id="phone" placeholder="enter employee's phone no.">
-        <input type="text" id="designation" placeholder="enter employee's designation">
-        <button onclick="addNewRecord()">Add</button>
-    </form>
-</div>
+    <a href="lab5.xml">Click here to load the table</a>
+    <h1>Train Schedule</h1>
+    <div style="margin-bottom: 30px;">
+        <input type="number" id="indexToDel" placeholder="Record to delete">
+        <button onclick="deleteRecord();">Delete</button>
+    </div>
+    <div style="margin-bottom: 30px;">
+        <form id="newRecForm">
+            <input type="text" id="id" placeholder="enter employee's id">
+            <input type="text" id="name" placeholder="enter employee's name">
+            <input type="text" id="age" placeholder="enter employee's age">
+            <input type="text" id="salary" placeholder="enter employee's salary">
+            <input type="text" id="email" placeholder="enter employee's email">
+            <input type="text" id="phone" placeholder="enter employee's phone no.">
+            <input type="text" id="designation" placeholder="enter employee's designation">
+            <button onclick="addNewRecord()">Add</button>
+        </form>
+    </div>
 
-<table id="table"></table>
-
-
+    <table id="table"></table>
 </body>
 
 </html>
